@@ -1,10 +1,4 @@
-name: Build Flutter APK
 
-on:
-  push:
-name: Créer Flutter APK
-
-on:
 name: Build Flutter APK
 
 on:
@@ -21,55 +15,6 @@ jobs:
 
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
-      with:
-        flutter-version: '3.19.6'
-
-    - name: Install dependencies
-      run: flutter pub get
-
-    - name: Build APK
-      run: flutter build apk --release
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v3
-      with:
-        name: kalix_mobile_apk
-        path: build/app/outputs/flutter-apk/app-release.apk
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.19.6'
-
-      - name: Installer les dépendances
-        run: flutter pub get
-
-      - name: Créer un APK
-        run: flutter build apk --release
-
-      - name: Télécharger l'APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: kalix_mobile_apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.19.6'
 
