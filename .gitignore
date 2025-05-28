@@ -1,0 +1,23 @@
+# Flutter
+.dart_tool/
+.packages
+.pub-cache/
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.symlinks/
+ios/Pods/
+ios/Runner.xcworkspace/
+macos/Pods/
+macos/.symlinks/
+linux/flutter/
+windows/flutter/
+coverage/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Others
+*.lock
